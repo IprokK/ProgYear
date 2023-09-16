@@ -108,8 +108,8 @@ def get_books_info():
             else:
                 after += 1
         before_percent = before / (after+before)
-        before_str = str(before_percent * 100)[:2] + "%) "
-        after_str = str(100 - int(str(before_percent * 100)[:2])) + "%) "
+        before_str = str(before_percent * 100).split(".")[0] + "%) "
+        after_str = str(100 - int(str(before_percent * 100).split(".")[0])) + "%) "
 
     total_symbols = 50
     before_symbols = round(total_symbols * before_percent)
@@ -123,6 +123,32 @@ def get_books_info():
     print(f'{RED}{" "}{END}{" - Книги до 2014 года (включительно) (" + str(before_str)}{BLUE}{" "}{END}'
           f'{" - Книги после 2014 года (" + after_str}{END}')
 
+    with open('books-en.csv', 'r') as csvfile:
+        table = csv.reader(csvfile, delimiter=';')
+        next(table)
+        before = 0
+        after = 0
+
+        for row in table:
+            if int(row[3]) <= 1980:
+                before += 1
+            else:
+                after += 1
+        before_percent = before / (after+before)
+        before_str = str(before_percent * 100).split(".")[0] + "%) "
+        after_str = str(100 - int(str(before_percent * 100).split(".")[0])) + "%) "
+
+    total_symbols = 50
+    before_symbols = round(total_symbols * before_percent)
+    after_symbols = total_symbols - before_symbols
+
+    chart = f'{RED}{" " * before_symbols}{BLUE}{" " * after_symbols}{END}'
+    print(" ")
+    print("Процентное соотношение книг до 1980 года и после: \n")
+    print(chart)
+    print(" ")
+    print(f'{RED}{" "}{END}{" - Книги до 1980 года (включительно) (" + str(before_str)}{BLUE}{" "}{END}'
+          f'{" - Книги после 1980 года (" + after_str}{END}')
 
 print(" ")
 print("Флаг Франции: ")
