@@ -1,0 +1,28 @@
+Решение для инвентаря в 7 ячеек отсутствует, так как выбирая наиболее выгодные предметы (н, о, ф, д, к, к) или
+(н, о, ф, д, а, а) или (н, о, ф, д, р, р) мы получим в сумме 85 баллов, отнять надо будет 120, получаем -15.
+Следовательно при инвентаре в 7 ячеек задача решения не имеет.
+
+Combination: ['rifle', 'medkit', 'knife', 'talisman', 'flask']
+Combination: ['rifle', 'knife', 'talisman', 'flask', 'food']
+Combination: ['rifle', 'knife', 'talisman', 'flask', 'crossbow']
+Combination: ['pistol', 'medkit', 'knife', 'talisman', 'flask', 'antidote']
+Combination: ['pistol', 'knife', 'talisman', 'flask', 'antidote', 'food']
+Combination: ['pistol', 'knife', 'talisman', 'flask', 'antidote', 'crossbow']
+Combination: ['ammo', 'medkit', 'knife', 'talisman', 'flask', 'antidote']
+Combination: ['ammo', 'knife', 'talisman', 'flask', 'antidote', 'food']
+Combination: ['ammo', 'knife', 'talisman', 'flask', 'antidote', 'crossbow']
+Combination: ['medkit', 'inhaler', 'knife', 'talisman', 'flask', 'food']
+Combination: ['medkit', 'inhaler', 'knife', 'talisman', 'flask', 'crossbow']
+Combination: ['medkit', 'knife', 'talisman', 'food', 'crossbow']
+Combination: ['medkit', 'talisman', 'flask', 'food', 'crossbow']
+Combination: ['inhaler', 'knife', 'talisman', 'flask', 'food', 'crossbow']
+Total Weight: 8
+Total Value: 100
+Points: 10
+
+Combination: ['medkit', 'knife', 'talisman', 'flask', 'antidote', 'food']
+Combination: ['medkit', 'knife', 'talisman', 'flask', 'antidote', 'crossbow']
+Combination: ['knife', 'talisman', 'flask', 'antidote', 'food', 'crossbow']
+Total Weight: 8
+Total Value: 105
+Points: 20
