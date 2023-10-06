@@ -14,6 +14,7 @@ def flag_fr():
     for i in range(6):
         print(f'{BLUE}{"  " * 4}{WHITE}{"  " * 4}{RED}{"  " * 4}{END}')
 
+
 def flag_ru():
     print(f'{WHITE}{"  " * 12}{END}')
     print(f'{WHITE}{"  " * 12}{END}')
@@ -21,6 +22,7 @@ def flag_ru():
     print(f'{BLUE}{"  " * 12}{END}')
     print(f'{RED}{"  " * 12}{END}')
     print(f'{RED}{"  " * 12}{END}')
+
 
 def flag_nd():
     print(f'{RED}{"  " * 12}{END}')

@@ -18,6 +18,7 @@ if len(top_20_rows) == 0:
 else:
     for res in top_20_rows:
         f.write(str(res) + "\n")
+    print("Книги записаны в файл result.txt")
 f.close()
 
 
@@ -36,4 +37,5 @@ if len(top_20_rows) == 0:
 else:
     for res in top_20_rows:
         f2.write(str(res) + "\n")
+    print("Книги записаны в файл result-en.txt")
 f2.close()

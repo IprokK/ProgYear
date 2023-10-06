@@ -1,10 +1,10 @@
 import csv
 
-f = open('result.txt','w')
+f = open('result.txt', 'w')
 f2 = open('result-en.txt', 'w')
 
-with open('books.csv','r') as csvfile:
-    table = csv.reader(csvfile, delimiter = ';')
+with open('books.csv', 'r') as csvfile:
+    table = csv.reader(csvfile, delimiter=';')
 
     headers = next(table)
     results = set()
@@ -19,15 +19,16 @@ with open('books.csv','r') as csvfile:
                 results.add(res)
 
 if len(results) == 0:
-        print('Нет результатов')
+    print('Нет результатов')
 else:
     for res in results:
         f.write(str(res) + "\n")
+    print("Книги записаны в файл result.txt")
 f.close()
 
 
-with open('books-en.csv','r') as csvfile:
-    table = csv.reader(csvfile, delimiter = ';')
+with open('books-en.csv', 'r') as csvfile:
+    table = csv.reader(csvfile, delimiter=';')
 
     headers = next(table)
     results = set()
@@ -37,8 +38,9 @@ with open('books-en.csv','r') as csvfile:
         results.add(res_str)
 
 if len(results) == 0:
-        print('Нет результатов')
+    print('Нет результатов')
 else:
     for res in results:
         f2.write(str(res) + "\n")
+    print("Книги записаны в файл result-en.txt")
 f2.close()

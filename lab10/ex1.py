@@ -1,5 +1,4 @@
 import json
-import os
 import pyttsx3
 import pyaudio
 import vosk
@@ -97,7 +96,6 @@ def execute_command(command):
 
     elif "назвать породу" in command or "назвать пород" in command or "порода" in command \
             or "назвать породы" in command or "породы" in command:
-        response = requests.get("https://dog.ceo/api/breeds/list/allhttps://dog.ceo/api/breeds/list/all")
         if current_image:
             breed = get_breed(url)
             if breed in dogbr:

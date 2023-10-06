@@ -3,6 +3,7 @@ import json
 
 # Вариант №4 (т.к. у hh.ru долгая процедура получения API)
 
+
 def get_news(country='ru', category='technology', page_size=5):
     base_url = 'https://newsapi.org/v2/top-headlines'
     params = {'country': country,
@@ -26,5 +27,6 @@ def get_news(country='ru', category='technology', page_size=5):
             print("----------")
     else:
         print(f'Ошибка. Код: {response.status_code}')
+
 
 get_news()

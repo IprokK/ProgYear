@@ -150,6 +150,7 @@ def get_books_info():
     print(f'{RED}{" "}{END}{" - Книги до 1980 года (включительно) (" + str(before_str)}{BLUE}{" "}{END}'
           f'{" - Книги после 1980 года (" + after_str}{END}')
 
+
 print(" ")
 print("Флаг Франции: ")
 flag_fr()

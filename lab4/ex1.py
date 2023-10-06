@@ -3,6 +3,7 @@ import random
 import pygame
 from PIL import Image, ImageTk
 
+
 def generate_key():
     def generate_block():
         letters = random.sample('ABCDEFGHIJKLMNOPQRSTUVWXYZ', 3)
@@ -14,12 +15,14 @@ def generate_key():
     key = f"{generate_block()}-{generate_block()}-{generate_block()}"
     return key
 
+
 def on_generate_click():
     generated_key = generate_key()
     key_entry.config(state="normal")
     key_entry.delete(0, tk.END)
     key_entry.insert(0, generated_key)
     key_entry.config(state="readonly")
+
 
 def animate_image(label, dx, dy):
     x, y = label.winfo_x(), label.winfo_y()
@@ -28,6 +31,7 @@ def animate_image(label, dx, dy):
     else:
         label.place(x=x + dx, y=0)
     root.after(20, animate_image, label, dx, dy)
+
 
 root = tk.Tk()
 root.title("Key Generator")

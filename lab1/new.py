@@ -1,8 +1,8 @@
 import csv
 stramount = 0
 nameamount = 0
-with open('books.csv','r') as csvfile:
-    table = csv.reader(csvfile, delimiter = ';')
+with open('books.csv', 'r') as csvfile:
+    table = csv.reader(csvfile, delimiter=';')
     for row in table:
         if stramount !=0:
             if len(row[1]) > 30:

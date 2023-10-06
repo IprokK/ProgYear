@@ -1,5 +1,6 @@
 import requests
 
+
 def get_weather(city_name):
     api_key = '3b579dfb318460b8f4702992ebf5de2d'
     base_url = 'http://api.openweathermap.org/data/2.5/weather'
@@ -8,17 +9,19 @@ def get_weather(city_name):
 
     if response.status_code == 200:
         data = response.json()
-
         weather_description = data['weather'][0]['description']
+        temperature = str(round(data['main']['temp'] - 273.15, 1))
         humidity = data['main']['humidity']
         pressure = data['main']['pressure']
 
         print(f'Погода в городе {city_name}:')
         print(f'Описание: {weather_description}')
+        print(f'Температура: {temperature} °C')
         print(f'Влажность: {humidity}%')
         print(f'Давление: {pressure} hPa')
     else:
         print(f'Ошибка. Код: {response.status_code}')
 
-city_name = input("Введите название города (Например: London, Moscow, Saint Petersburg: ")
-get_weather(city_name)
+
+city = input("Введите название города (Например: London, Moscow, Saint Petersburg: ")
+get_weather(city)

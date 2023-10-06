@@ -6,17 +6,17 @@ x_array = np.zeros(3774)
 y1_array = np.zeros(3774)
 y2_array = np.zeros(3774)
 
-with open('data1.csv','r') as csvfile:
-    table = csv.reader(csvfile, delimiter = ';')
+with open('data1.csv', 'r') as csvfile:
+    table = csv.reader(csvfile, delimiter=';')
     headers = next(table)
-    i=0
+    i = 0
     for row in table:
-        if i==0:
+        if i == 0:
             print(row)
         x_array[i] = float(row[0])
         y1_array[i] = float(row[4])
         y2_array[i] = float(row[5])
-        i+=1
+        i += 1
 
 plt.figure(figsize=(8, 6))
 
